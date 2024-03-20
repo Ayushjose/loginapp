@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginapp/Signup.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -25,8 +26,11 @@ class _WelcomeState extends State<Welcome> {
             Image.network('https://img.freepik.com/free-vector/office-workplace-background_24908-58537.jpg?size=626&ext=jpg&ga=GA1.1.1788068356.1710201600&semt=ais'),
             SizedBox(height: 50,width:250 ,
 
-                child: TextButton(style:ButtonStyle(backgroundColor:MaterialStatePropertyAll(Colors.lightBlue)),onPressed: null, child: Text(
-                    'sign up',style:TextStyle(color: Colors.white)))),
+                child: TextButton(style:ButtonStyle(backgroundColor:MaterialStatePropertyAll(Colors.lightBlue)),
+                    onPressed:() {
+    Navigator.push(context,
+    MaterialPageRoute(builder: (context) => const Signup()));}, child: Text(
+                    'sign up',style:TextStyle(color: Colors.white),))),
                 SizedBox(height: 50,width:250,
                     child: TextButton(style:ButtonStyle(backgroundColor:MaterialStatePropertyAll(Colors.lightBlue)),onPressed: null, child: Text(
                         'sign up',style:TextStyle(color: Colors.white)))),
